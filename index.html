@@ -717,5 +717,71 @@
             border-radius: 10px;
         }
     </style>
-</head>
-<body>
+        <!-- ===== АВТОРИЗАЦИЯ ===== -->
+    <div id="authOverlay">
+        <h1>🍎 Три в ряд</h1>
+        <p>Нажми «Войти», чтобы начать игру</p>
+        <button id="authSubmitBtn">🎮 Войти в игру</button>
+    </div>
+
+    <!-- ===== ГЛАВНОЕ ПРИЛОЖЕНИЕ ===== -->
+    <div id="app">
+
+        <!-- Верхняя панель -->
+        <div id="topPanel">
+            <div class="user-info">
+                👤 <span id="userName">Гость</span>
+            </div>
+            <div class="stats">
+                <span>🏆 <span id="score">0</span></span>
+                <span>👆 <span id="moves">0</span></span>
+                <span>🏅 <span id="highScore">0</span></span>
+                <span>💰 <span id="moneyDisplay">0</span></span>
+            </div>
+        </div>
+
+        <!-- Игровое поле -->
+        <div id="gameArea">
+            <div id="grid"></div>
+        </div>
+
+        <!-- Статус -->
+        <div id="statusMsg">🍎 Собирай комбинации из 3+ фруктов!</div>
+
+        <!-- Нижняя панель -->
+        <div id="bottomPanel">
+            <button id="newGameBtn">🔄 Новая игра</button>
+            <button id="shuffleBtn">🔀 Перемешать</button>
+            <button id="shopBtn" class="primary">🏪 Магазин</button>
+        </div>
+
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast"></div>
+
+    <!-- ===== МАГАЗИН ===== -->
+    <div id="shopOverlay">
+        <div id="shopModal">
+            <button class="shop-close" id="shopClose">✕</button>
+            <h2>🏪 Магазин</h2>
+            <div class="shop-money">💰 <span id="shopMoney">0</span></div>
+            <div id="shopItems"></div>
+        </div>
+    </div>
+
+    <!-- ===== ПОБЕДА / ПОРАЖЕНИЕ ===== -->
+    <div id="gameOver">
+        <div class="go-box">
+            <div class="go-text" id="goText">💀 ПОРАЖЕНИЕ</div>
+            <div class="go-score" id="goScore">Очки: 0</div>
+            <button id="restartBtn">🔄 Ещё раз</button>
+        </div>
+    </div>
+
+    <!-- ===== ПОДКЛЮЧЕНИЕ СКРИПТОВ ===== -->
+    <script src="auth.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>
